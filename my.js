@@ -10,7 +10,7 @@ var myLibrary = {
             firstName = pm.variables.replaceIn('{{$randomFirstName}}'),
             lastName = pm.variables.replaceIn('{{$randomLastName}}')
         }
-        
+        console.log("obj ->" + obj);
         return obj;
     }
 }
