@@ -5,6 +5,12 @@ var myLibrary = {
         return teste;
     },
     readData: function(){
-        return pm.variables.replaceIn('{{$randomFirstName}}');
+        
+        var obj = {
+            firstName = pm.variables.replaceIn('{{$randomFirstName}}'),
+            lastName = pm.variables.replaceIn('{{$randomLastName}}')
+        }
+        
+        return obj;
     }
 }
