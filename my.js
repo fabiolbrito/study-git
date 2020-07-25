@@ -4,7 +4,7 @@ var myLibrary = {
     makeStartRefresher: function(teste) {
         return teste;
     },
-    readData: function(address){
-    //function code
+    readData: function(){
+        return pm.variables.replaceIn('{{$randomFirstName}}');
     }
 }
