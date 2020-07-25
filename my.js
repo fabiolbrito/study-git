@@ -7,8 +7,8 @@ var myLibrary = {
     readData: function(){
         
         var obj = {
-            firstName = pm.variables.replaceIn('{{$randomFirstName}}'),
-            lastName = pm.variables.replaceIn('{{$randomLastName}}')
+            firstName: pm.variables.replaceIn('{{$randomFirstName}}'),
+            lastName: pm.variables.replaceIn('{{$randomLastName}}')
         }
         console.log("obj ->" + obj);
         return obj;
