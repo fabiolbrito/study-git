@@ -4,7 +4,10 @@ var myLibrary = {
     makeStartRefresher: function(teste) {
         return teste;
     },
-    readData: function(){
+    getZipCode: function(){
+        return Math. floor(Math. random() * 100000000);
+    },
+    getName: function(){
         
         var obj = {
             firstName: pm.variables.replaceIn('{{$randomFirstName}}'),
