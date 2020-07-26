@@ -266,5 +266,34 @@ var myLibrary = {
             abbreviation: random.abbreviation
         }
         return obj;
+    },getCustomer: function(sellerId) {
+
+        var address = {
+            street : pm.variables.replaceIn('{{$randomStreetName}}'),
+            number : pm.variables.replaceIn('{{randomInt}}'),
+            complement : pm.variables.replaceIn('{{$randomStreetName}}'),
+            district : pm.variables.replaceIn('{{$randomLoremWord}}'),
+            city: pm.variables.replaceIn('{{$randomCity}}'), 
+            state : this.getState().abbreviation,
+            country: pm.variables.replaceIn('{{$randomCountry}}'),
+            postal_code : this.getZipCode()
+        }
+
+        var obj = {
+            seller_id: sellerId,
+            customer_id: pm.variables.replaceIn('{{$randomUUID}}'),
+            first_name: pm.variables.replaceIn('{{$randomFirstName}}'),
+            last_name: pm.variables.replaceIn('{{$randomLastName}}'),
+            document_type: "CPF",
+            document_number: "12345678912",
+            birth_date : "1976-02-21",
+            phone_number: pm.variables.replaceIn('{{$randomPhoneNumber}}'),
+            celphone_number: pm.variables.replaceIn('{{$randomPhoneNumber}}'),
+            email: pm.variables.replaceIn('{{$randomEmail}}'),
+            observation : pm.variables.replaceIn('{{$randomLoremSentence}}'), 
+            address : this.address
+        }
+        return obj;
+
     }
 }
