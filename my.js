@@ -291,7 +291,7 @@ var myLibrary = {
             celphone_number: pm.variables.replaceIn('{{$randomPhoneNumber}}'),
             email: pm.variables.replaceIn('{{$randomEmail}}'),
             observation : pm.variables.replaceIn('{{$randomLoremSentence}}'), 
-            address : this.address
+            address : address
         }
         return obj;
 
