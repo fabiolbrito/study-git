@@ -270,7 +270,7 @@ var myLibrary = {
 
         var address = {
             street : pm.variables.replaceIn('{{$randomStreetName}}'),
-            number : pm.variables.replaceIn('{{randomInt}}'),
+            number : pm.variables.replaceIn('{{$randomInt}}'),
             complement : pm.variables.replaceIn('{{$randomStreetName}}'),
             district : pm.variables.replaceIn('{{$randomLoremWord}}'),
             city: pm.variables.replaceIn('{{$randomCity}}'), 
